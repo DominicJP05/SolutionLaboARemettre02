@@ -1,4 +1,4 @@
-// But: Calculer le montant qu'un individu devra débourser pour faire un voyage dans une automobile louée. En utilisant un algorithme.
+// But: Calculer le montant qu'un individu devra dÃ©bourser pour faire un voyage dans une automobile louÃ©e. En utilisant un algorithme.
 // Auteur: Dominic Jeannotte-Parent
 // Date: 2020-09-16
 
@@ -10,10 +10,10 @@ using namespace std;
 
 int main()
 {
-	// Caractères spéciaux
+	// CaractÃ¨res spÃ©ciaux
 	setlocale(LC_ALL, "");
 
-	// Déclaration des variables
+	// DÃ©claration des variables
 	int jour;
 	float km;
 	float kmmoy;
@@ -23,34 +23,36 @@ int main()
 	float litres;
 	float depensefinal;
 	
-	// Au départ le coût est de 0 et il augmentera
+	// Au dÃ©part le coÃ»t est de 0 et il augmentera
 	depense = 0;
 	depense1 = 0;
-	// Demander à l'utilisateur le nombre de jours de location de la voiture
+	// Demander Ã  l'utilisateur le nombre de jours de location de la voiture
 	
-	cout << "Bonjour !" << endl << "Bienvenu au logiciel de calcul des dépenses pour un voyage en automobile !" << endl; // Message de bienvenu
+	// FR : 
+	cout << "Bonjour !" << endl << "Bienvenu au logiciel de calcul des dÃ©penses pour un voyage en automobile !" << endl; // Message de bienvenu
 	
-	cout << "Veuillez insérer le nombre de jours pendant lequel vous louerez la voiture: ";
+	cout << "Veuillez insÃ©rer le nombre de jours pendant lequel vous louerez la voiture: ";
 	cin >> jour;
-	// Calcul du coût pour le nombre de jour et stockage dans la variable depense.
+	// Calcul du coÃ»t pour le nombre de jour et stockage dans la variable depense.
 	depense = jour * 45;
 	
 	// Demander le nombre de km parcouru par jour en moyenne.
 
-	cout << "Veuillez insérer le nombre de Kilomètres parcourus au total: ";
+	cout << "Veuillez insÃ©rer le nombre de KilomÃ¨tres parcourus au total: ";
 	cin >> km;
-	// calculer la moyenne des kilomètres
+	// calculer la moyenne des kilomÃ¨tres
 	kmmoy = km / jour;
-	// Si la moyenne dépasse 250 on charge sinon on ne change pas le prix.
+	// Si la moyenne dÃ©passe 250 on charge sinon on ne change pas le prix.
 	if (kmmoy > 250)
 	{
+		// KM : Je ne suis pas sÃ»re que cela soit le bon calcul
 		kmmoyplus = kmmoy - 250; // On soustrait les km gratuit pour avoir la moyenne des km extra.
-		depense1 = depense + (0.05 * kmmoyplus); // Rajouter le surplus à la valeur dépense.
-		cout << "Avec vos kilomètres supplémentaire votre facture est maintenant de " << depense1 << " $." << endl;// Affiche la facture temporaire
+		depense1 = depense + (0.05 * kmmoyplus); // Rajouter le surplus Ã  la valeur dÃ©pense.
+		cout << "Avec vos kilomÃ¨tres supplÃ©mentaire votre facture est maintenant de " << depense1 << " $." << endl;// Affiche la facture temporaire
 	}
 	else
 	{
-		cout << "Pas de kilomètre supplémentaire. Vous ne serez pas chargez plus." << endl; // Message d'avertissement
+		cout << "Pas de kilomÃ¨tre supplÃ©mentaire. Vous ne serez pas chargez plus." << endl; // Message d'avertissement
 		cout << "Votre facture est maintenant de " << depense << " $." << endl; // Facture temporaire
 	}
 
@@ -60,15 +62,15 @@ int main()
 
 	if (depense1 > depense)
 	{
-		depensefinal = depense1; // Déterminer le prix final au même que depense1
-		depensefinal = depense1 + litres * 1.25; // Recalcule la dépense final avec le prix du gas
-		cout << "Votre facture s'élève à " << depensefinal << " $. ";
+		depensefinal = depense1; // DÃ©terminer le prix final au mÃªme que depense1
+		depensefinal = depense1 + litres * 1.25; // Recalcule la dÃ©pense final avec le prix du gas
+		cout << "Votre facture s'Ã©lÃ¨ve Ã  " << depensefinal << " $. ";
 	}
 	else
 	{
-		depensefinal = depense; // Déterminer le prix final au même que depense
-		depensefinal = depense + litres * 1.25; // Recalcule la dépense final avec le prix du gas
-		cout << "Votre facture s'élève à " << depensefinal << " $. "; // Affiche le montant final de la facture
+		depensefinal = depense; // DÃ©terminer le prix final au mÃªme que depense
+		depensefinal = depense + litres * 1.25; // Recalcule la dÃ©pense final avec le prix du gas
+		cout << "Votre facture s'Ã©lÃ¨ve Ã  " << depensefinal << " $. "; // Affiche le montant final de la facture
 	}
 	/*
 		Plan de test:
@@ -84,3 +86,21 @@ int main()
 
 	return 0;
 }
+// KM : Le programme ressemble Ã©trangement au porgramme de Christophe Baron. Faites bien attention au plagiat.
+// KM : Ici c'est trÃ¨s limite. Comme c'est un devoir, je donne juste un avertissement
+/*
+â€¢	La solution est bien nommÃ©e et comporte un projet 5/ 5
+â€¢	Les fichiers sources contiennent l'identification complÃ¨te du programme et de son auteur	5/5
+â€¢	Le code source est sans erreur de compilation 15/ 15		// KM : Le code est un peu compliquÃ©, il faut regrouper les calculs communs
+â€¢	Le programme est fonctionnel 15/ 20				avec 10 jours et 3000 km je n'obtiens pas le bon montant
+â€¢	Le programme passe le plan de tests 15/ 20
+â€¢	Le code source est largement commentÃ© 20 / 20
+â€¢	La solution est dÃ©posÃ©e dans LEA et dans GitHub.L'adresse est envoyÃ©e via Outlook	10/15
+// KM : Le lien gitHub affiche seulement le fichier location.cpp, pas toute la solution
+
+
+
+Note 80/100
+Bon travail !!! Le code pourrait Ãªtre mieux structurÃ© pour s'y retrouver plus facilement
+*/
+
